@@ -1,10 +1,10 @@
 export function convert(
   amount: number,
-  from: String,
-  to: String,
+  from: string,
+  to: string,
   rates: Record<string, number>,
 ): number {
   return amount * (rates[to] / rates[from]);
 }
 
-convert(100, "USD", "EUR", { USD: 1, EUR: 0.9 });
+export const result = convert(50000, "NGN", "USD", { NGN: 1400, USD: 1 });
